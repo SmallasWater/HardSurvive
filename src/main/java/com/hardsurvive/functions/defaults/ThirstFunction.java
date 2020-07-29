@@ -6,21 +6,27 @@ import com.hardsurvive.functions.BaseFunction;
 /**
  * @author SmallasWater
  */
-public class ThirstFunction implements BaseFunction {
+public class ThirstFunction extends BaseFunction {
+    public ThirstFunction(HardSurvive plugin) {
+        super(plugin);
+    }
+
     @Override
     public String getName() {
         return "Thirst";
     }
 
     @Override
-    public void onStart(HardSurvive plugin) {
+    public void onStart() {
 
     }
 
     @Override
-    public void onDisable(HardSurvive plugin) {
+    public void onDisable() {
 
     }
+
+
 
 
 

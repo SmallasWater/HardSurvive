@@ -6,27 +6,37 @@ import com.hardsurvive.HardSurvive;
 /**
  * @author SmallasWater
  */
-public interface BaseFunction extends Listener {
+public abstract class BaseFunction implements Listener {
 
 
+    private HardSurvive plugin;
+
+    protected BaseFunction(HardSurvive plugin){
+        this.plugin = plugin;
+    }
     /**
      * 功能名称
      *
      * @return 功能的名称
      * */
-    String getName();
+    abstract public String getName();
 
     /**
      * 功能入口
-     * @param plugin 类
      * */
-    void onStart(HardSurvive plugin);
+    abstract public void onStart();
 
     /**
      * 功能关闭
-     * @param plugin 类
      * */
-    void onDisable(HardSurvive plugin);
+    abstract public void onDisable();
+
+    /**
+     * 获取配置文件路径
+     * */
+    public String getFunctionDataFolder(){
+        return plugin.getDataFolder()+"/"+getName();
+    }
 
 
 
