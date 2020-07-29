@@ -1,4 +1,6 @@
 package com.hardsurvive;
 
-public class HardSurvive {
+import cn.nukkit.plugin.PluginBase;
+
+public class HardSurvive extends PluginBase {
 }
