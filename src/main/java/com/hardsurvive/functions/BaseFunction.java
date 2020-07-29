@@ -1,5 +1,6 @@
 package com.hardsurvive.functions;
 
+import cn.nukkit.Player;
 import cn.nukkit.event.Listener;
 import cn.nukkit.utils.Config;
 import com.hardsurvive.HardSurvive;
@@ -56,6 +57,17 @@ public abstract class BaseFunction implements Listener {
             config = new Config(getFunctionDataFolder() + "/" + getName() + ".yml");
         }
         return config;
+    }
+
+    /**
+     * 获取玩家数据
+     * @param player 玩家
+     * @return 数据
+     */
+    public Config getConfig(Player player) {
+        //TODO 返回存放玩家数据的config
+        //用于为每个玩家保存口渴值等数据
+        return null;
     }
 
 
