@@ -1,5 +1,6 @@
 package com.hardsurvive.functions.defaults;
 
+
 import com.hardsurvive.HardSurvive;
 import com.hardsurvive.functions.BaseFunction;
 
@@ -13,7 +14,7 @@ public class ThirstFunction extends BaseFunction {
 
     @Override
     public String getName() {
-        return "Thirst";
+        return "thirst";
     }
 
     @Override

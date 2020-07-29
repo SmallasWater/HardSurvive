@@ -1,0 +1,8 @@
+#
+# Thirst 功能
+#
+
+open-world: ["world1","world2"]
+  # 开启的世界
+  # 在此世界内 玩家将减少口渴值
+dirnks:
