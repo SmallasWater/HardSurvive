@@ -23,5 +23,5 @@ public class ThirstFunction implements BaseFunction {
     }
 
 
-    
+
 }
