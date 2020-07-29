@@ -9,7 +9,7 @@ public class ThirstFunction implements BaseFunction {
     }
 
     @Override
-    public void onStrat() {
+    public void onStart() {
 
     }
 }

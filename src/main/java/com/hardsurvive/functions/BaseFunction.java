@@ -10,7 +10,7 @@ public interface BaseFunction {
     /**
      * 功能入口
      * */
-    void onStrat();
+    void onStart();
 
 
 }
