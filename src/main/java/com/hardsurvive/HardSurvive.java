@@ -1,6 +1,7 @@
 package com.hardsurvive;
 
 import cn.nukkit.plugin.PluginBase;
+import com.hardsurvive.data.PlayerConfigManager;
 import com.hardsurvive.functions.BaseFunction;
 import com.hardsurvive.functions.defaults.ThirstFunction;
 
@@ -12,11 +13,21 @@ import java.util.List;
  */
 public class HardSurvive extends PluginBase {
 
+    private static HardSurvive hardSurvive;
+
+    private PlayerConfigManager playerConfigManager;
+
     private static final List<BaseFunction> FUNCTIONS = new LinkedList<>();
+
+    public static HardSurvive getInstance() {
+        return hardSurvive;
+    }
 
     @Override
     public void onEnable() {
+        hardSurvive = this;
         this.getLogger().info("正在启动插件, 开始加载模块");
+        this.playerConfigManager = new PlayerConfigManager(this);
         this.initFunction();
         for(BaseFunction function : FUNCTIONS) {
             function.setEnabled(true);
@@ -33,10 +44,15 @@ public class HardSurvive extends PluginBase {
         FUNCTIONS.add(function);
     }
 
+    public PlayerConfigManager getPlayerConfigManager() {
+        return this.playerConfigManager;
+    }
+
     @Override
     public void onDisable() {
         for(BaseFunction function : FUNCTIONS) {
             function.setEnabled(false);
         }
     }
+
 }

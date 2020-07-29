@@ -83,16 +83,12 @@ public abstract class BaseFunction implements Listener {
 
     /**
      * 获取玩家数据
+     *
      * @param player 玩家
-     * @return 数据
+     * @return {@link Config}
      */
     public Config getConfig(Player player) {
-        //TODO 返回存放玩家数据的config
-        //用于为每个玩家保存口渴值等数据
-        return null;
+        return this.plugin.getPlayerConfigManager().getPlayerConfig(player);
     }
-
-
-
 
 }
