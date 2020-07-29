@@ -9,7 +9,7 @@ import com.hardsurvive.HardSurvive;
 public abstract class BaseFunction implements Listener {
 
 
-    private HardSurvive plugin;
+    private final HardSurvive plugin;
 
     protected BaseFunction(HardSurvive plugin){
         this.plugin = plugin;
