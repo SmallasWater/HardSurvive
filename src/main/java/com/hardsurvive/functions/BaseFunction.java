@@ -5,7 +5,7 @@ public interface BaseFunction {
     /**
      * 功能名称
      * */
-    void getName();
+    String getName();
 
     /**
      * 功能入口
