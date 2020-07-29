@@ -14,22 +14,23 @@ public abstract class BaseFunction implements Listener {
     protected BaseFunction(HardSurvive plugin){
         this.plugin = plugin;
     }
+
     /**
      * 功能名称
      *
      * @return 功能的名称
      * */
-    abstract public String getName();
+    public abstract String getName();
 
     /**
      * 功能入口
      * */
-    abstract public void onStart();
+    public abstract void onStart();
 
     /**
      * 功能关闭
      * */
-    abstract public void onDisable();
+    public abstract void onDisable();
 
     /**
      * 获取配置文件路径
