@@ -12,12 +12,34 @@ import java.io.File;
  */
 public abstract class BaseFunction implements Listener {
 
+    private boolean isEnabled = false;
+
     private Config config;
 
     private final HardSurvive plugin;
 
     protected BaseFunction(HardSurvive plugin){
         this.plugin = plugin;
+    }
+
+    public final boolean isEnabled() {
+        return this.isEnabled;
+    }
+
+    public final void setEnabled() {
+        this.setEnabled(true);
+    }
+
+    public final void setEnabled(boolean value) {
+        if (this.isEnabled != value) {
+            this.isEnabled = value;
+            if (this.isEnabled) {
+                this.onStart();
+            } else {
+                this.onDisable();
+            }
+        }
+
     }
 
     /**

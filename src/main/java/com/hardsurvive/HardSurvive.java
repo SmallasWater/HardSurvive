@@ -19,11 +19,10 @@ public class HardSurvive extends PluginBase {
         this.getLogger().info("正在启动插件, 开始加载模块");
         this.initFunction();
         for(BaseFunction function : FUNCTIONS) {
-            function.onStart();
+            function.setEnabled(true);
             this.getServer().getPluginManager().registerEvents(function,this);
             this.getLogger().info("成功启动"+function.getName()+"模块");
         }
-
     }
 
     private void initFunction() {
@@ -36,8 +35,8 @@ public class HardSurvive extends PluginBase {
 
     @Override
     public void onDisable() {
-        for(BaseFunction function: FUNCTIONS) {
-            function.onDisable();
+        for(BaseFunction function : FUNCTIONS) {
+            function.setEnabled(false);
         }
     }
 }
